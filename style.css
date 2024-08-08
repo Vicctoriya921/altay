@@ -1,233 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-</style>
+/* Подключи шрифт тут */
+@import url(./Fira_Sans\,Open_Sans.zip);
 
-* {<style>
-
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'OpenSans', 'Verdana', 'StratosSkyeng'
-    font-size: 16px;
-    min-height: 100vh;
-    background-color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+
+    padding-bottom: 120px;
+    margin: 0 auto;
+
+    /* Напиши ограничения тут */
+
+
+max-width: 1920px;
+min-width: 360px;
 }
 
-.header__chapter {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 150%;
-    color: #8D39C0;
+.header {
+    background-image: url(./images/nick-night-iukcNL5isUo-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+
+.header__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.header__nav {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.header__menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 34px;
+    border: none;
+    background-image: url(./images/Menu.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__item>span {
+    margin: 0 5px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.author {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    z-index: 2;
+
+    color: rgba(255, 255, 255, 0.50);
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.header__titles {
+    display: flex;
+    flex-direction: column;
 }
 
 .header__title {
-    color: #8D39C0;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 150%;
-}
-
-
-.content {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-
-.content__wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 970px;
-    padding: 63px 155px;
-    min-height: 100%;
-}
-
-.content__text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 46px 0;
-}
-
-.text {
-    font-size: 16px;
-    line-height: 150%;
-}
-
-.content__footer {
-    text-align: center;
-    color: rgba(0, 0, 0, .5);
-}
-
-.content__settings {
-    max-width: 640px;
-    width: 100%;
-    background: linear-gradient(180deg, #CEAAE4 0%, #E8D7F2 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 63px 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.settings {
-    width: 60%;
-}
-
-.settings__close {
-    width: 60px;
-    height: 66px;
-    background-image: url(images/Close_button.svg);
-    background-color: transparent;
-    border: none;
-
-    position: absolute;
-    top: 50%;
-    right: 95%;
-    cursor: pointer;
-    /* Плавная смена состояния */
-    transition: right 0.05s;
-}
-
-.settings__close:hover {
-    right: 96%;
-}
-
-.settings__close:active {
-    right: 95%;
-}
-
-.auth {
-    width: 100%;
-    margin-bottom: 80px;
-}
-
-.auth__labels {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 13px;
-}
-
-.auth__label {
-    font-size: 26px;
+    font-size: 128px;
     font-weight: 700;
-    line-height: 150%;
+    text-transform: uppercase;
+    max-width: 600px;
+    line-height: normal;
 }
 
-.auth__sublabel {
-    font-size: 20px;
-    line-height: 150%;
+.header__subtitle {
+    font-size: 24px;
     font-weight: 400;
+    line-height: normal;
 }
 
-.auth__btn {
-    padding: 9px 31px;
-    border-radius: 32px;
-    background-color: #8D39C0;
-    color: white;
-    border: none;
-    width: min-content;
-    margin: 0 auto;
-    cursor: pointer;
-    font-size: 26px;
-    margin-top: 30px;
-}
 
-.auth__btn:hover {
-    opacity: .7;
-}
-
-.settings__form, .auth {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.settings__label {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 150%;
-    margin-bottom: 13px;
-}
-
-.label {
-    background-color: white;
-    padding: 8px 10px;
-    border-radius: 8px;
-    font-size: 23px;
-    line-height: 150%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.input {
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: 0 14px;
-    line-height: 150%;
-    font-size: 23px;
-    box-sizing: border-box;
+.footer {
     width: 100%;
-}
+    height: 186px;
 
-.settings__input {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
-    padding: 0 14px;
-    border-radius: 8px;
-    background-color: rgba(231, 235, 236, 0.50);
-    outline: none;
-    border: none;
-    font-size: 23px;
-    line-height: 150%;
-    width: 100%;
-}
-
-.settings__font-color {
-    background-color: transparent;
-    cursor: pointer;
-    padding: 0; 
-}
-
-.settings__font-size {
-    text-align: center;
-}
-
-.settings__background-color-label {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1.5px solid #878D92;
-    cursor: pointer;
 }
 
-.white {
-    background-color: white;
+.footer__nav {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
 }
 
-.bisque {
-    background-color: bisque;
+/* Напиши код ниже */
+
+@media screen  and ( max-width: 1245px) {
+
+    .header__title {
+        font-size: 100px;
+    }
+    
 }
 
-.grey {
-    background-color: grey;
-}
+    @media screen  and ( max-width: 768px) {
 
-.black {
-    background-color: black;
-}
+        .header__nav  {
+            display: none;
+        }
+
+        
+        .header__overlay {
+            padding: 40px;
+        }
+        
+        .header__menu {
+            display: block;
+            
+        }
+        .header__subtitle{
+            font-size: 18px;
+        }
+        
+        .header__title {
+            font-size: 60px;
+        }
+
+        .header {
+            height: 500px;
+        }
+    } 
